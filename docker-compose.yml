@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    container_name: fikfit_postgres
+    restart: always
+    environment:
+      POSTGRES_DB: fikfit_db
+      POSTGRES_USER: fikfit_user
+      POSTGRES_PASSWORD: fikfit_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    container_name: fikfit_app
+    restart: always
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/fikfit_db
+      SPRING_DATASOURCE_USERNAME: fikfit_user
+      SPRING_DATASOURCE_PASSWORD: fikfit_pass
+    ports:
+      - "8080:8080"
+    # Aguarda o banco subir antes de iniciar
+    entrypoint: ["sh", "-c", "sleep 10 && java -jar app.jar"]
+
+volumes:
+  db_data:
+
