@@ -85,4 +85,24 @@ public class StudentController {
     public ResponseEntity<List<StudentEntity>> getAllStudents() {
         return ResponseEntity.ok(studentService.getAllStudents());
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<StudentEntity> updateStudent(@PathVariable Long id, @RequestBody StudentEntity studentData) {
+        try {
+            StudentEntity updatedStudent = studentService.updateStudent(id, studentData);
+            return ResponseEntity.ok(updatedStudent);
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteStudent(@PathVariable Long id) {
+        try {
+            studentService.deleteStudent(id);
+            return ResponseEntity.noContent().build();
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
 }

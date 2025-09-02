@@ -1,0 +1,791 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2025-01-31T21:15:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "req_students_get_all",
+      "parentId": "fld_students",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "url": "{{ _.base_url }}/api/v1/student/all",
+      "name": "Get All Students",
+      "description": "Buscar todos os estudantes",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ _.jwt_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1706735700000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_students_get_by_id",
+      "parentId": "fld_students",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "url": "{{ _.base_url }}/api/v1/student/1",
+      "name": "Get Student by ID",
+      "description": "Buscar estudante por ID",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ _.jwt_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1706735699000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_students_create",
+      "parentId": "fld_students",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "url": "{{ _.base_url }}/api/v1/student",
+      "name": "Create Student",
+      "description": "Criar novo estudante",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"name\": \"João Silva\",\n  \"email\": \"joao.silva@email.com\",\n  \"phone\": \"(11) 99999-9999\",\n  \"address\": \"Rua das Flores, 123\",\n  \"city\": \"São Paulo\",\n  \"state\": \"SP\",\n  \"country\": \"Brasil\",\n  \"gender\": \"MALE\",\n  \"birthDate\": \"1990-05-15\",\n  \"userId\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ _.jwt_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1706735698000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_students_update",
+      "parentId": "fld_students",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "url": "{{ _.base_url }}/api/v1/student/1",
+      "name": "Update Student",
+      "description": "Atualizar estudante",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"name\": \"João Silva Santos\",\n  \"email\": \"joao.santos@email.com\",\n  \"phone\": \"(11) 88888-8888\",\n  \"address\": \"Rua das Palmeiras, 456\",\n  \"city\": \"São Paulo\",\n  \"state\": \"SP\",\n  \"country\": \"Brasil\",\n  \"gender\": \"MALE\",\n  \"birthDate\": \"1990-05-15\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ _.jwt_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1706735697000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_students_delete",
+      "parentId": "fld_students",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "url": "{{ _.base_url }}/api/v1/student/1",
+      "name": "Delete Student",
+      "description": "Deletar estudante",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ _.jwt_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1706735696000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_exercises_get_all",
+      "parentId": "fld_exercises",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "url": "{{ _.base_url }}/api/v1/exercises",
+      "name": "Get All Exercises",
+      "description": "Buscar todos os exercícios",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1706735695000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_exercises_get_by_muscle_group",
+      "parentId": "fld_exercises",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "url": "{{ _.base_url }}/api/v1/exercises/muscle-group/peito",
+      "name": "Get Exercises by Muscle Group",
+      "description": "Buscar exercícios por grupo muscular",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1706735694000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_exercises_create",
+      "parentId": "fld_exercises",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "url": "{{ _.base_url }}/api/v1/exercises",
+      "name": "Create Exercise",
+      "description": "Criar novo exercício",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"name\": \"Supino Reto\",\n  \"muscleGroup\": \"Peito\",\n  \"equipment\": \"Barra\",\n  \"instructions\": \"Deite-se no banco, segure a barra com pegada pronada, desça controladamente até o peito e empurre para cima.\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ _.jwt_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1706735693000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_workouts_get_all",
+      "parentId": "fld_workouts",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "url": "{{ _.base_url }}/api/v1/workouts",
+      "name": "Get All Workouts",
+      "description": "Buscar todos os treinos",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1706735692000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_workouts_get_by_student",
+      "parentId": "fld_workouts",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "url": "{{ _.base_url }}/api/v1/workouts/student/1",
+      "name": "Get Workouts by Student",
+      "description": "Buscar treinos por estudante",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1706735691000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_workouts_create",
+      "parentId": "fld_workouts",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "url": "{{ _.base_url }}/api/v1/workouts",
+      "name": "Create Workout",
+      "description": "Criar novo treino",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"name\": \"Treino A - Peito e Tríceps\",\n  \"description\": \"Treino focado em peito e tríceps para iniciantes\",\n  \"student\": {\n    \"id\": 1\n  }\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ _.jwt_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1706735690000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_measurements_get_all",
+      "parentId": "fld_measurements",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "url": "{{ _.base_url }}/api/v1/measurements",
+      "name": "Get All Measurements",
+      "description": "Buscar todas as medidas",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1706735689000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_measurements_create",
+      "parentId": "fld_measurements",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "url": "{{ _.base_url }}/api/v1/measurements",
+      "name": "Create Measurement",
+      "description": "Criar nova medida",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"student\": {\n    \"id\": 1\n  },\n  \"measurementDate\": \"2025-01-31\",\n  \"weight\": 75.5,\n  \"height\": 1.75,\n  \"bodyFat\": 15.2,\n  \"muscleMass\": 35.8,\n  \"chest\": 95.0,\n  \"waist\": 80.0,\n  \"hip\": 90.0,\n  \"rightArm\": 32.0,\n  \"leftArm\": 32.0,\n  \"rightThigh\": 55.0,\n  \"leftThigh\": 55.0,\n  \"rightCalf\": 35.0,\n  \"leftCalf\": 35.0,\n  \"observations\": \"Primeira medição do aluno\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ _.jwt_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1706735688000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_appointments_get_all",
+      "parentId": "fld_appointments",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "url": "{{ _.base_url }}/api/v1/appointments",
+      "name": "Get All Appointments",
+      "description": "Buscar todos os agendamentos",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1706735687000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_appointments_create",
+      "parentId": "fld_appointments",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "url": "{{ _.base_url }}/api/v1/appointments",
+      "name": "Create Appointment",
+      "description": "Criar novo agendamento",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"student\": {\n    \"id\": 1\n  },\n  \"appointmentDate\": \"2025-02-15T10:00:00\",\n  \"type\": \"EVALUATION\",\n  \"status\": \"SCHEDULED\",\n  \"title\": \"Avaliação Física Inicial\",\n  \"description\": \"Primeira avaliação física do aluno\",\n  \"observations\": \"Trazer roupas adequadas para exercício\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ _.jwt_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1706735686000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_dashboard_stats",
+      "parentId": "fld_dashboard",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "url": "{{ _.base_url }}/api/v1/dashboard/stats",
+      "name": "Get Dashboard Stats",
+      "description": "Buscar estatísticas do dashboard",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ _.jwt_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1706735685000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_dashboard_recent_activities",
+      "parentId": "fld_dashboard",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "url": "{{ _.base_url }}/api/v1/dashboard/recent-activities",
+      "name": "Get Recent Activities",
+      "description": "Buscar atividades recentes",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ _.jwt_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1706735684000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_auth_login",
+      "parentId": "fld_auth",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "url": "{{ _.base_url }}/api/v1/auth/login",
+      "name": "Login",
+      "description": "Fazer login e obter token JWT",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"username\": \"admin\",\n  \"password\": \"123456\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1706735683000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_auth_register",
+      "parentId": "fld_auth",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "url": "{{ _.base_url }}/api/v1/auth/register",
+      "name": "Register",
+      "description": "Registrar novo usuário",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"username\": \"novo_usuario\",\n  \"password\": \"senha123\",\n  \"email\": \"usuario@email.com\",\n  \"role\": \"USER\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1706735682000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_users_create",
+      "parentId": "fld_users",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "url": "{{ _.base_url }}/api/v1/users",
+      "name": "Create User",
+      "description": "Criar novo usuário (endpoint protegido)",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"username\": \"trainer_user\",\n  \"password\": \"senha123\",\n  \"email\": \"trainer@fikfit.com\",\n  \"role\": \"TRAINER\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1706735681000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_profile_get",
+      "parentId": "fld_profile",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "url": "{{ _.base_url }}/api/v1/profile",
+      "name": "Get Profile",
+      "description": "Buscar perfil do usuário logado",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ _.jwt_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1706735680000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_profile_update",
+      "parentId": "fld_profile",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "url": "{{ _.base_url }}/api/v1/profile",
+      "name": "Update Profile",
+      "description": "Atualizar perfil do usuário logado",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"firstName\": \"João\",\n  \"lastName\": \"Silva\",\n  \"phone\": \"(11) 99999-9999\",\n  \"address\": \"Rua das Flores, 123\",\n  \"city\": \"São Paulo\",\n  \"state\": \"SP\",\n  \"country\": \"Brasil\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ _.jwt_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1706735679000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_students",
+      "parentId": "wrk_fikfit",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "name": "Students",
+      "description": "Endpoints relacionados aos estudantes",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1706735700000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_exercises",
+      "parentId": "wrk_fikfit",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "name": "Exercises",
+      "description": "Endpoints relacionados aos exercícios",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1706735699000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_workouts",
+      "parentId": "wrk_fikfit",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "name": "Workouts",
+      "description": "Endpoints relacionados aos treinos",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1706735698000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_measurements",
+      "parentId": "wrk_fikfit",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "name": "Measurements",
+      "description": "Endpoints relacionados às medidas corporais",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1706735697000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_appointments",
+      "parentId": "wrk_fikfit",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "name": "Appointments",
+      "description": "Endpoints relacionados aos agendamentos",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1706735696000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_dashboard",
+      "parentId": "wrk_fikfit",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "name": "Dashboard",
+      "description": "Endpoints relacionados ao dashboard",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1706735695000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_auth",
+      "parentId": "wrk_fikfit",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "name": "Authentication",
+      "description": "Endpoints de autenticação (login e registro)",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1706735694000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_users",
+      "parentId": "wrk_fikfit",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "name": "Users",
+      "description": "Endpoints de gerenciamento de usuários",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1706735693000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_profile",
+      "parentId": "wrk_fikfit",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "name": "Profile",
+      "description": "Endpoints de perfil do usuário",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1706735692000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "env_base",
+      "parentId": "wrk_fikfit",
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "name": "Base Environment",
+      "data": {
+        "base_url": "http://localhost:8080",
+        "jwt_token": "SEU_TOKEN_JWT_AQUI"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_url",
+          "jwt_token"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1706735700000,
+      "_type": "environment"
+    },
+    {
+      "_id": "wrk_fikfit",
+      "parentId": null,
+      "modified": 1706735700000,
+      "created": 1706735700000,
+      "name": "FikFit API",
+      "description": "Collection completa da API FikFit - Sistema de Gestão de Academia",
+      "scope": "collection",
+      "_type": "workspace"
+    }
+  ]
+}

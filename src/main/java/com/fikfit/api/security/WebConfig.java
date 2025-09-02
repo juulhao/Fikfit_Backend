@@ -13,11 +13,11 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(jwtAuthInterceptor)
-            .addPathPatterns("/api/v1/student/**", "/api/v1/users/**", "/api/v1/profile/**")
+            .addPathPatterns("/api/v1/student/**", "/api/v1/profile/**")
             .excludePathPatterns("/api/v1/auth/**");
         // Protege todos os outros endpoints da API
         registry.addInterceptor(jwtAuthInterceptor)
             .addPathPatterns("/api/v1/**")
-            .excludePathPatterns("/api/v1/auth/**", "/api/v1/student/**", "/api/v1/users/**", "/api/v1/profile/**");
+            .excludePathPatterns("/api/v1/auth/**", "/api/v1/users/**", "/api/v1/student/**", "/api/v1/profile/**");
     }
 }
